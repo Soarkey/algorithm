@@ -1,11 +1,10 @@
 package t1001;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 /**
  * 1001 数组中和等于K的数对
- * <p>
+ *
  * 给出一个整数K和一个无序数组A，
  * A的元素为N个互不相同的整数，
  * 找出数组A中所有和等于K的数对。
@@ -17,34 +16,8 @@ import java.util.Scanner;
  */
 public class Main {
     public static void main(String[] args) {
-        Scanner in = new Scanner(System.in);
-        int k = in.nextInt();
-        int n = in.nextInt();
-        int i = 0;
-        int[] a = new int[n];
-        while (i != n) {
-            a[i] = in.nextInt();
-            ++i;
-        }
-        Arrays.sort(a);
-        int p = 0, q = n - 1;
-        int sum;
-        boolean flag = false;
-        while (p < q) {
-            sum = a[p] + a[q];
-            if (sum == k) {
-                System.out.println(a[p] + " " + a[q]);
-                ++p;
-                --q;
-                flag = true;
-            } else if (sum > k) {
-                --q;
-            } else {
-                ++p;
-            }
-        }
-        if (!flag) {
-            System.out.println("No Solution");
-        }
+        Scanner in =  new Scanner(System.in);
+
     }
+
 }
